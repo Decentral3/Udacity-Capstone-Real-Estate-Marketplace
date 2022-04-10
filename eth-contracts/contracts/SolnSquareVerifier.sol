@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.6.0;
+pragma solidity >=0.4.21 <0.6.0;
 import "./ERC721Mintable.sol";
 import "./SquareVerifier.sol";
 
