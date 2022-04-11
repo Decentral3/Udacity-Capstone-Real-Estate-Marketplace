@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.5.0;
 
-import "@openzeppelin/contracts/utils/Address.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
-import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
+import "@openzeppelin-solidity/contracts/utils/Address.sol;
+import "@openzeppelin-solidity/contracts/utils/Counters.sol";
+import "@openzeppelin-solidity/contracts/utils/math/SafeMath.sol";
+import "@openzeppelin-solidity/contracts/token/ERC721/IERC721Receiver.sol";
+import "@openzeppelin-solidity/contracts/utils/Strings.sol";
 import "./Oraclize.sol";
 
 contract Ownable {
@@ -574,11 +574,11 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
         return _name;
     }
 
-    function symbol external view returns (string memory) {
+    function symbol() external view returns (string memory) {
         return _symbol;
     }
 
-    function baseTokenURI external view returns (string memory) {
+    function baseTokenURI() external view returns (string memory) {
         return _baseTokenURI;
     }
     function tokenURI(uint256 tokenId) external view returns (string memory) {
