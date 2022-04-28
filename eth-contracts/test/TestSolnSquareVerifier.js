@@ -8,14 +8,14 @@ contract('SolnSquareVerifier', accounts => {
         this.contract = await SolnSquareVerifier.new(this.verifier.address);
     });
 
-    it('A New Solution Can be added for Contract' async () => {
+    it('A New Solution Can be added for Contract', async () => {
         await this.contract.addSolution(accounts[0], 1);
 
         let events = await this.contract.getPastEvents('SolutionAdded');
         assert.equal(events.length, 1);
     })
 
-    it('An ERC721 Token can be minted for Contract' async () => {
+    it('An ERC721 Token can be minted for Contract', async () => {
         const tokenId = 1;
         await this.contract.mintNFT(tokenId, Proof1.proof, Proof1.inputs);
 
